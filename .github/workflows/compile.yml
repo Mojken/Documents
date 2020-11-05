@@ -39,7 +39,8 @@ jobs:
           author_name: Uppsala Datavetare
           author_email: dv-ordf@utn.se
           message: "Automatically generated"
-          branch: v$GITHUB_RUN_NUMBER
+          pull_strategy: "--rebase"
+          branch: v${{ GITHUB_RUN_NUMBER }}
           tag: "documents"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
