@@ -28,10 +28,12 @@ jobs:
             UD-reglemente.tex
           post_compile:
             "./postscript.sh"
-          
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v2
+      
+      # Adds the two resulting pdfs to a commit, then pushes that
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v5.1.0
         with:
-          name: PDFs
-          path: ./*.pdf
+          add: -f UD-stadgar.pdf UD-reglemente.pdf
+          message: "Automatically generated"
+        env: ${{ secrets.GITHUB_TOKEN }}
 
