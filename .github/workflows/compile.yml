@@ -4,7 +4,9 @@ name: CI
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the main branch
-on: [ push, pull_request ]
+on:
+  push:
+    branches: master
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,7 +36,10 @@ jobs:
         uses: EndBug/add-and-commit@v5.1.0
         with:
           add: "UD-stadgar.pdf UD-reglemente.pdf --force"
+          author_name: Uppsala Datavetare
+          author_email: dv-ordf@utn.se
           message: "Automatically generated"
+          branch: documents
+          tag: "documents"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
