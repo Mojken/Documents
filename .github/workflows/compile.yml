@@ -23,7 +23,7 @@ jobs:
       - name: Github Action for LaTeX
         uses: xu-cheng/latex-action@v2
         with: 
-          root-file: |
+          root_file: |
             UD-stadgar.tex
             UD-reglemente.tex
           post_compile:
