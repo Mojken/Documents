@@ -33,7 +33,7 @@ jobs:
       - name: Add & Commit
         uses: EndBug/add-and-commit@v5.1.0
         with:
-          add: -f UD-stadgar.pdf UD-reglemente.pdf
+          add: "-f UD-stadgar.pdf UD-reglemente.pdf"
           message: "Automatically generated"
         env: ${{ secrets.GITHUB_TOKEN }}
 
