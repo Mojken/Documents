@@ -39,6 +39,7 @@ jobs:
           author_name: Uppsala Datavetare
           author_email: dv-ordf@utn.se
           message: "Automatically generated"
+          pull_strategy: "--rebase"
           branch: documents
           tag: "documents"
         env:
