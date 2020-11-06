@@ -41,6 +41,6 @@ jobs:
           message: "Automatically generated"
           pull_strategy: "--rebase"
           branch: documents
-          tag: "v${GITHUB_RUN_NUMBER}"
+          tag: "v${{GITHUB_RUN_NUMBER}}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
